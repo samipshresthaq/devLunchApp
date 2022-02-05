@@ -1,7 +1,0 @@
-{
-  "name": "devLaunchApp",
-  "integrations": {
-    "capacitor": {}
-  },
-  "type": "angular"
-}
