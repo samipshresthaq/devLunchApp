@@ -1,0 +1,17 @@
+{
+    "lunch": [
+      { "id": 1, "name": "Buff Mo.Mo", "tags":"buff momo", "imageUrl": "url", "price": 150 }
+    ],
+    "settings": {
+      "id": 1,
+      "maxPrice": 150,
+      "discountPricePercentage": 10
+    },
+    "users": [
+      { "id": 1, "name": "Puskal", "userName": "puskal", "password":"puskal" },
+      { "id": 2, "name": "Brij", "userName": "brij", "password":"brij" },
+      { "id": 3, "name": "Subash", "userName": "subash", "password":"subash" },
+      { "id": 4, "name": "Samip", "userName": "samip", "password":"samip" },
+      { "id": 5, "name": "Min", "userName": "min", "password":"min" }
+    ]
+  }
