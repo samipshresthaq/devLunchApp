@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AppComponent } from './app.component';
 
 const routes: Routes = [
   {
@@ -9,27 +10,36 @@ const routes: Routes = [
   },
   {
     path: 'login',
-    loadChildren: () =>  import('./login/login.module').then( m => m.LoginModule)
+    loadChildren: () => import('./pages/login/login.module').then(m => m.LoginModule)
   },
   {
     path: 'signup',
-    loadChildren: () => import('./signup/signup.module').then(m => m.SignupModule)
+    loadChildren: () => import('./pages/signup/signup.module').then(m => m.SignupModule)
   },
   {
     path: 'home',
-    loadChildren: () => import('./home/home.module').then(m => m.HomeModule)
+    loadChildren: () => import('./pages/home/home.module').then(m => m.HomeModule)
   },
   {
     path: 'setting',
-    loadChildren: () => import('./setting/setting.module').then(m => m.SettingModule)
+    loadChildren: () => import('./pages/setting/setting.module').then(m => m.SettingModule)
   },
   {
     path: 'add-product',
-    loadChildren: () => import('./add-product/add-product.module').then(m => m.AddProductModule)
+    loadChildren: () => import('./pages/add-product/add-product.module').then(m => m.AddProductModule)
   },
   {
-    path: 'add-product/:id',
-    loadChildren: () => import('./detail-page/detail-page.module').then(m => m.DetailPageModule)
+    path: 'detail-page',
+    children: [
+      {
+        path: ':id',
+        loadChildren: () => import('./pages/detail-page/detail-page.module').then(m => m.DetailPageModule)
+      }
+    ]
+  },
+  {
+    path: '**',
+    loadChildren: () => import('./pages/not-found/not-found-routing.module').then(m => m.NotFoundRoutingModule)
   }
 ];
 
