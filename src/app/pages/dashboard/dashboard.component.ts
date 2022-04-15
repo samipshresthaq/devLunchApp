@@ -12,4 +12,9 @@ export class DashboardComponent implements OnInit {
   ngOnInit(): void {
   }
 
+
+  handleQuickOrder($event: string){
+    console.log($event,'string');
+  }
+
 }
