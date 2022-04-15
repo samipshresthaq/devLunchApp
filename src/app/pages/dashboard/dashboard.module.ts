@@ -5,6 +5,7 @@ import { DashboardRoutingModule } from './dashboard-routing.module';
 import { CardComponent } from 'src/app/containers/card/card.component';
 import { DashboardComponent } from './dashboard.component';
 import { MaterialModule } from 'src/app/meterial.module';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { MaterialModule } from 'src/app/meterial.module';
   imports: [
     CommonModule,
     DashboardRoutingModule,
-    MaterialModule
+    MaterialModule,
+    FormsModule
   ]
 })
 export class DashboardModule {}

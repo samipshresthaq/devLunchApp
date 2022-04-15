@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Card } from 'src/app/model/card.model';
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
@@ -13,7 +13,7 @@ export class DashboardComponent implements OnInit {
   }
 
 
-  handleQuickOrder($event: string){
+  handleQuickOrder($event: Card){
     console.log($event,'string');
   }
 

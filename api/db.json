@@ -1,6 +1,21 @@
 {
-    "lunch": [
-      { "id": 1, "name": "Buff Mo.Mo", "tags":"buff momo", "imageUrl": "url", "price": 150 }
+    "items": [
+      {
+        "uri": "one",
+        "title": "Buff Mo.Mo",
+        "imageUrl": "url",
+        "price": 150,
+        "tags":"buff momo",
+        "categories":"['none-veg']"
+      },
+      {
+        "uri": "one",
+        "title": "Veg Mo.Mo",
+        "imageUrl": "url",
+        "price": 150,
+        "tags":"buff momo",
+        "categories":"['none-veg']"
+      }
     ],
     "settings": {
       "id": 1,
