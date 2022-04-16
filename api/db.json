@@ -1,6 +1,41 @@
 {
-    "lunch": [
-      { "id": 1, "name": "Buff Mo.Mo", "tags":"buff momo", "imageUrl": "url", "price": 150 }
+    "recipes": [
+      {
+        "uri": "one",
+        "title": "Buff Mo.Mo",
+        "imageUrl": "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2018/1/10/0/DV2802_Nepali-Momo_s4x3.jpg.rend.hgtvcom.826.620.suffix/1515644556794.jpeg",
+        "price": 100,
+        "tags":"buff momo",
+        "quantity": 1,
+        "categories":"none-veg"
+      },
+      {
+        "uri": "two",
+        "title": "Veg Chowmein",
+        "imageUrl": "https://cookwithparul.com/wp-content/uploads/2021/01/maxresdefault-17-1-1.jpg",
+        "price": 80,
+        "tags":"veg, chowmein",
+        "quantity": 1,
+        "categories":"veg"
+      },
+      {
+        "uri": "three",
+        "title": "Chicken Burger",
+        "imageUrl": "https://media.istockphoto.com/photos/juicy-hamburger-on-white-background-picture-id1206323282?k=20&m=1206323282&s=612x612&w=0&h=yatlq6BHRCCvoTzFZLSwaJc0O8Quct_tRPWtH0dj9Fc=",
+        "price": 110,
+        "tags":"checken, burger",
+        "quantity": 1,
+        "categories":"non-veg, chicken"
+      },
+      {
+        "uri": "three",
+        "title": "Mutton Soup",
+        "imageUrl": "https://i.ytimg.com/vi/69t03dLfwHA/maxresdefault.jpg",
+        "price": 60,
+        "tags":"soup, mutton",
+        "quantity": 1,
+        "categories":"non-veg, mutton, soup"
+      }
     ],
     "settings": {
       "id": 1,

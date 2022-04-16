@@ -1,0 +1,58 @@
+@import "../variables";
+@for $i from -10 through 10 {
+    %m-#{$i} {
+      margin: $spacer*$i;
+    }
+
+    %mx-#{$i} {
+        margin: 0 $spacer*$i;
+    }
+
+    %my-#{$i} {
+        margin: $spacer*$i 0;
+    }
+
+    %mt-#{$i} {
+        margin-top: $spacer*$i;
+    }
+
+    %mr-#{$i} {
+        margin-right: $spacer*$i;
+    }
+
+    %mb-#{$i} {
+        margin-bottom: $spacer*$i;
+    }
+
+    %ml-#{$i} {
+        margin-left: $spacer*$i;
+    }
+
+    %p-#{$i} {
+      padding: $spacer*$i;
+    }
+
+    %px-#{$i} {
+      margin: 0 $spacer*$i;
+    }
+
+    %py-#{$i} {
+        padding: $spacer*$i 0;
+    }
+
+    %pt-#{$i} {
+        padding-top: $spacer*$i;
+    }
+
+    %pr-#{$i} {
+        padding-right: $spacer*$i;
+    }
+
+    %pb-#{$i} {
+        padding-bottom: $spacer*$i;
+    }
+
+    %pl-#{$i} {
+        padding-left: $spacer*$i;
+    }
+}

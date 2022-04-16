@@ -1,0 +1,10 @@
+
+<app-recipes
+    *ngIf="recipes.length; else loadingRecipes"
+    [recipes]="recipes"
+    (quickOrder)="handleQuickOrder($event)">
+</app-recipes>
+
+<ng-template #loadingRecipes>
+    <mat-spinner [diameter]="40"></mat-spinner>
+</ng-template>

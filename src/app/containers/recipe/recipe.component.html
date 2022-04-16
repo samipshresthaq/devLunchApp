@@ -1,0 +1,48 @@
+<mat-card>
+
+    <img mat-card-image src="{{imageUrl}}" alt="{{title}}">
+    
+    <mat-card-header>
+        <mat-card-title>{{title}}</mat-card-title>
+        <mat-card-subtitle>Rs. {{price}}</mat-card-subtitle>
+    </mat-card-header>
+
+    <div>
+        <div class="label">
+            Quantity
+        </div>
+
+        <mat-radio-group class="quantity-radio-wrapper">
+            <mat-radio-button (change)="onQuantityChange( $event )" [value]="half" [checked]="quantity === half"
+                name="order-type">Half</mat-radio-button>
+
+            <mat-radio-button (change)="onQuantityChange( $event )" [value]="full" [checked]="quantity === full"
+                name="order-type">Full</mat-radio-button>
+
+            <mat-radio-button (change)="onQuantityChange( $event )" [value]="double" name="order-type">Custom
+            </mat-radio-button>
+
+            <mat-form-field class="custom-quantity-order" appearance="fill" *ngIf="quantity !== full && quantity !== half">
+                <mat-label>Custom Quantity</mat-label>
+                <input matInput type="number" min="1" [value]="quantity" (blur)="onCustomQuantityChange( $event )">
+            </mat-form-field>
+        </mat-radio-group>
+    </div>
+
+    <div class="mat-form-field-wrapper">
+        <div class="label">Order Type</div>
+        <mat-radio-group>
+            <mat-radio-button (change)="onOrderTypeChange( $event )" [value]="tableOrder"
+                [checked]="selectedOrderType === tableOrder" name="order-type">Table</mat-radio-button>
+
+            <mat-radio-button (change)="onOrderTypeChange( $event )" [value]="packingOrder"
+                [checked]="selectedOrderType === packingOrder" name="order-type">Packing</mat-radio-button>
+        </mat-radio-group>
+    </div>
+
+    <mat-card-actions>
+        <button mat-raised-button color="primary" (click)="onQuickOrder()">Quick Order</button>
+        <a mat-button color="primary">Check Detail</a>
+    </mat-card-actions>
+
+</mat-card>
