@@ -2,21 +2,23 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { DashboardRoutingModule } from './dashboard-routing.module';
-import { CardComponent } from 'src/app/containers/card/card.component';
 import { DashboardComponent } from './dashboard.component';
 import { MaterialModule } from 'src/app/meterial.module';
 import { FormsModule } from '@angular/forms';
+import { RecipeComponent } from 'src/app/containers/recipe/recipe.component';
+import { RecipesComponent } from 'src/app/containers/recipes/recipes.component';
 
 @NgModule({
   declarations: [
     DashboardComponent,
-    CardComponent,
+    RecipeComponent,
+    RecipesComponent,
   ],
   imports: [
     CommonModule,
     DashboardRoutingModule,
     MaterialModule,
-    FormsModule
+    FormsModule,
   ]
 })
 export class DashboardModule {}

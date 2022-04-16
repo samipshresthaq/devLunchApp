@@ -1,17 +1,24 @@
-import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 import { MatRadioChange } from '@angular/material/radio';
-import { OrderType, Card } from 'src/app/model/card.model';
+import { Recipe, OrderType, Quantity } from 'src/app/model/recipe.model';
+
 @Component({
-  selector: 'app-card',
-  templateUrl: './card.component.html',
-  styleUrls: ['./card.component.scss']
+  selector: 'app-recipe',
+  templateUrl: './recipe.component.html',
+  styleUrls: ['./recipe.component.scss']
 })
-export class CardComponent implements OnInit {
+export class RecipeComponent implements OnInit {
 
   /* Public scope variables */
   public tableOrder: OrderType = OrderType.TABLE;
   public packingOrder: OrderType = OrderType.PACKING;
-  public defaultCardValue: Card = {
+
+  /* Quantity Type */
+  public full: number = 1;
+  public half: number = 0.5;
+  public double: number = 2;
+  
+  public defaultCardValue: Recipe = {
     title: '',
     imageUrl: '',
     uri: '',
@@ -28,10 +35,9 @@ export class CardComponent implements OnInit {
   @Input() selectedOrderType: OrderType = this.defaultCardValue.orderType;
   @Input() uri: string = this.defaultCardValue.uri;
 
-  /* Output Event */
-  @Output() quickOrder = new EventEmitter<Card>();
+  /* Outputs */
+  @Output() quickOrder = new EventEmitter<Recipe>();
 
-  
 
   constructor() {
   }
@@ -43,7 +49,7 @@ export class CardComponent implements OnInit {
   /**
    * Provide the current value or card
    */
-  get quickOrderItem(): Card{
+  get quickOrderItem(): Recipe{
     return {
       title: this.title,
       imageUrl: this.imageUrl,
@@ -67,15 +73,29 @@ export class CardComponent implements OnInit {
    */
   public onQuickOrder(){
     this.quickOrder.emit( this.quickOrderItem );
-    this.reset();
   }
 
   /**
    * Handle order type change
    */
-  onOrderTypeChange( $event: MatRadioChange){
+  public onOrderTypeChange( $event: MatRadioChange){
     const { value } = $event;
     this.selectedOrderType = value;
   }
 
+  /**
+   * Handle quntity change
+   */
+  public onQuantityChange( $event: MatRadioChange){
+    const { value } = $event;
+    this.quantity = value;
+  }
+
+  /**
+   * Handle custom quantity change
+   */
+  public onCustomQuantityChange( $event: any ){
+    this.quantity = +$event?.target?.value;
+  }
 }
+

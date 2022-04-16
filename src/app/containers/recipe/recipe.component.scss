@@ -1,0 +1,34 @@
+@import "../../../assets/scss/placeholder/spacer";
+
+.label{
+    font-weight: bold;
+    @extend %mb-1;
+}
+
+.quantity-radio-wrapper{
+    display: block;
+    @extend %mb-6;
+
+    .custom-quantity-order{
+        ::ng-deep{
+            .mat-form-field-wrapper{
+                @extend %mt-4;
+                @extend %mb--5;
+            }
+        }
+    }
+}
+
+
+
+.mat-radio-button ~ .mat-radio-button {
+    @extend %ml-4;
+}
+
+:host{
+    ::ng-deep{
+        .mat-card-header-text{
+            margin: 0;
+        }
+    }
+}

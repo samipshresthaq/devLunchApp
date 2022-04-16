@@ -1,0 +1,13 @@
+<div class="app-recipes">
+    <mat-grid-list cols="4" gutterSize="15px" rowHeight="512px" >
+        <mat-grid-tile *ngFor=" let recipe of recipes">
+            <app-recipe
+                [imageUrl]="recipe.imageUrl"
+                [title]="recipe.title"
+                [price]="recipe.price"
+                [quantity]= "recipe.quantity"
+                (quickOrder)="handleQuickOrder($event)"
+        ></app-recipe>
+        </mat-grid-tile>
+    </mat-grid-list>
+</div>

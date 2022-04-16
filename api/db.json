@@ -1,19 +1,21 @@
 {
-    "items": [
+    "recipes": [
       {
         "uri": "one",
         "title": "Buff Mo.Mo",
-        "imageUrl": "url",
+        "imageUrl": "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2018/1/10/0/DV2802_Nepali-Momo_s4x3.jpg.rend.hgtvcom.826.620.suffix/1515644556794.jpeg",
         "price": 150,
         "tags":"buff momo",
+        "quantity": 1,
         "categories":"['none-veg']"
       },
       {
         "uri": "one",
         "title": "Veg Mo.Mo",
-        "imageUrl": "url",
+        "imageUrl": "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2018/1/10/0/DV2802_Nepali-Momo_s4x3.jpg.rend.hgtvcom.826.620.suffix/1515644556794.jpeg",
         "price": 150,
         "tags":"buff momo",
+        "quantity": 1,
         "categories":"['none-veg']"
       }
     ],

@@ -8,7 +8,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "lint": "ng lint",
-    "api": "json-server --watch api/db.json --port 3004"
+    "server": "json-server --watch api/db.json --port 3004"
   },
   "private": true,
   "dependencies": {

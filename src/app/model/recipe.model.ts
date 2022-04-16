@@ -3,7 +3,7 @@ export enum OrderType {
     PACKING = 'packing'
 };
 
-export interface Card {
+export interface Recipe {
     title: string;
     imageUrl: string;
     uri: string;
@@ -11,3 +11,9 @@ export interface Card {
     quantity: number;
     orderType: OrderType;
 };
+
+export enum Quantity {
+    FULL = 1,
+    HALF = 0.5,
+    CUSTOM = 'custom'
+}
